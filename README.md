@@ -80,10 +80,15 @@ endmodule
 ## Testbench for Seven-Segment Display:
 
 module sevenseg(seg,s); 
+
 input [3:0]seg; 
+
 output reg[6:0]s; 
-always@(seg) 
+
+always@(seg)
+
 begin 
+
     case(seg) 
         4'd0 : s= 7'b0111111; 
         4'd1 : s= 7'b0000110; 
@@ -98,6 +103,7 @@ begin
         default:s=7'b0000000; 
     endcase
 end
+
 endmodule
 
 ## output 
